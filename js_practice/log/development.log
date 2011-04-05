@@ -1,0 +1,1625 @@
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (573.4ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (14.7ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (297.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategories (20110302130156)
+  [1m[35mSQL (150.5ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (48.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110302130156')[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `categories`
+
+
+Started GET "/categories" for 127.0.0.1 at Wed Mar 02 18:22:43 +0500 2011
+
+ActionController::RoutingError (No route matches "/categories"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/categories/index" for 127.0.0.1 at Wed Mar 02 18:22:57 +0500 2011
+
+ActionController::RoutingError (No route matches "/categories/index"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Wed Mar 02 18:38:16 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (3.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 131ms (Views: 10.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/categories/new_method" for 127.0.0.1 at Wed Mar 02 18:39:55 +0500 2011
+
+AbstractController::ActionNotFound (The action 'show' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Wed Mar 02 18:43:21 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (4.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 26ms (Views: 11.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Wed Mar 02 18:44:13 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 142ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Wed Mar 02 18:45:10 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (3.3ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 40ms (Views: 24.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 03 17:25:38 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 154ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 03 17:29:42 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 03 17:29:58 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 03 17:30:05 +0500 2011
+
+AbstractController::ActionNotFound (The action 'show' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 03 17:30:12 +0500 2011
+
+AbstractController::ActionNotFound (The action 'edit' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 16:46:04 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (199.9ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 348ms (Views: 23.7ms | ActiveRecord: 199.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 16:46:21 +0500 2011
+
+AbstractController::ActionNotFound (The action 'show' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 16:50:22 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 16:50:23 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 26ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 16:50:50 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 16:51:01 +0500 2011
+
+AbstractController::ActionNotFound (The action 'edit' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 16:52:04 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 16:52:09 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (13.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 9.2ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:27:09 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (22.5ms)
+Completed   in 84ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"}):
+    18:         <td>1</td>
+    19:         <td><%= category.name %></td>
+    20:         <td>
+    21:         	<%= link_to 'Show', :action => 'show' %> | 
+    22: 			<%= link_to 'Edit', edit_category_path(category) %> |
+    23: 			<%= link_to 'Remove', category, :confirm => 'Are you sure?', :method => :delete %>
+    24: 		</td>
+  app/views/categories/index.html.erb:21:in `_app_views_categories_index_html_erb__724253332_89028460_0'
+  app/views/categories/index.html.erb:16:in `each'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__724253332_89028460_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:27:39 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (7.3ms)
+Completed   in 23ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"}):
+    18:         <td>1</td>
+    19:         <td><%= category.name %></td>
+    20:         <td>
+    21:         	<%= link_to 'Show', :action => 'show' %> | 
+    22: 			<%= link_to 'Edit', edit_category_path(category) %> |
+    23: 			<%= link_to 'Remove', category, :confirm => 'Are you sure?', :method => :delete %>
+    24: 		</td>
+  app/views/categories/index.html.erb:21:in `_app_views_categories_index_html_erb__724253332_88489230_0'
+  app/views/categories/index.html.erb:16:in `each'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__724253332_88489230_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:27:41 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (8.1ms)
+Completed   in 23ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"}):
+    18:         <td>1</td>
+    19:         <td><%= category.name %></td>
+    20:         <td>
+    21:         	<%= link_to 'Show', :action => 'show' %> | 
+    22: 			<%= link_to 'Edit', edit_category_path(category) %> |
+    23: 			<%= link_to 'Remove', category, :confirm => 'Are you sure?', :method => :delete %>
+    24: 		</td>
+  app/views/categories/index.html.erb:21:in `_app_views_categories_index_html_erb__724253332_87908950_0'
+  app/views/categories/index.html.erb:16:in `each'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__724253332_87908950_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.6ms)
+
+
+Started GET "/categories/show" for 127.0.0.1 at Mon Mar 14 17:27:47 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mSQL (17.4ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (9.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 0) LIMIT 1[0m
+Completed   in 48827ms
+
+ActiveRecord::RecordNotFound (Couldn't find Category with ID=show):
+  app/controllers/categories_controller.rb:9:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:29:07 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (14.0ms)
+Completed   in 50ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"}):
+    18:         <td>1</td>
+    19:         <td><%= category.name %></td>
+    20:         <td>
+    21:         	<%= link_to 'Show', :action => 'show' %> | 
+    22: 			<%= link_to 'Edit', edit_category_path(category) %> |
+    23: 			<%= link_to 'Remove', category, :confirm => 'Are you sure?', :method => :delete %>
+    24: 		</td>
+  app/views/categories/index.html.erb:21:in `_app_views_categories_index_html_erb__724253332_88681740_0'
+  app/views/categories/index.html.erb:16:in `each'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__724253332_88681740_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:29:43 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (7.1ms)
+Completed   in 24ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"categories"}):
+    18:         <td>1</td>
+    19:         <td><%= category.name %></td>
+    20:         <td>
+    21:         	<%= link_to 'Show', :action => 'show' %> | 
+    22: 			<%= link_to 'Edit', edit_category_path(category) %> |
+    23: 			<%= link_to 'Remove', category, :confirm => 'Are you sure?', :method => :delete %>
+    24: 		</td>
+  app/views/categories/index.html.erb:21:in `_app_views_categories_index_html_erb__724253332_88148040_0'
+  app/views/categories/index.html.erb:16:in `each'
+  app/views/categories/index.html.erb:16:in `_app_views_categories_index_html_erb__724253332_88148040_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:30:49 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:30:58 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:31:10 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 22ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:33:11 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (21.6ms)
+Completed   in 36ms
+
+ActionView::Template::Error (undefined local variable or method `category' for #<#<Class:0xa87751c>:0xa8766e4>):
+    8: 		<h1>Category Detail</h1>
+    9: 		
+    10: 		Name: <%= @category.name %>
+    11: 		<%= link_to 'Edit', edit_category_path(category)%>
+    12: 		
+    13: 
+    14: 	</body>
+  app/views/categories/show.html.erb:11:in `_app_views_categories_show_html_erb___147672302_88320630_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (78.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (97.8ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:33:21 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:33:31 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 23ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:38:38 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (112.1ms)
+Completed   in 133ms
+
+ActionView::Template::Error (undefined method `new_category_path_path' for #<#<Class:0xa829b78>:0xa828db8>):
+    6: 	</head>
+    7: 	<body>
+    8: 		<h1>Categories</h1>
+    9: 		<%= link_to 'Add', :new_category_path %>
+    10: 		<table width="80%" border="1">
+    11:     <tr>
+    12:         <th>Sr. No</th>
+  app/views/categories/index.html.erb:9:in `_app_views_categories_index_html_erb__724253332_88162420_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:38:52 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Mon Mar 14 17:38:57 +0500 2011
+
+AbstractController::ActionNotFound (The action 'new' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:39:04 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:48:15 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:48:18 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (21.2ms)
+Completed   in 33ms
+
+ActionView::Template::Error (undefined method `category_path_path' for #<#<Class:0xa8d8998>:0xa8d7b9c>):
+    9: 		
+    10: 		Name: <%= @category.name %><br />
+    11: 		<%= link_to 'Edit', edit_category_path(@category)%>
+    12: 		<%=  link_to 'View', :category_path %>
+    13: 		
+    14: 
+    15: 	</body>
+  app/views/categories/show.html.erb:12:in `_app_views_categories_show_html_erb___147672302_88520460_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:48:26 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 33ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:49:31 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 24ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:49:34 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 24ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Mon Mar 14 17:49:39 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 17:49:50 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 17:53:35 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 17:53:36 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 17:53:37 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 17:53:38 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Mon Mar 14 17:54:10 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 54ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 17:54:12 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Mon Mar 14 17:54:14 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 16:11:17 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (54.8ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 190ms (Views: 81.5ms | ActiveRecord: 54.8ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 31 16:11:22 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 46ms (Views: 34.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:11:24 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 16:11:28 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:11:38 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:12:40 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:12:41 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:12:58 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Rendered categories/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:16:44 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:16:46 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:21:12 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/edit.html.erb within layouts/application (37.9ms)
+Completed   in 50ms
+
+ActionView::Template::Error (undefined local variable or method `category' for #<#<Class:0xa755e04>:0xa7543ec>):
+    6: 	</head>
+    7: 	<body>
+    8: 		<h1>Details</h1>
+    9: 		<% form_for(category) do |f|%>
+    10: 			<%= f.text_field :name %>
+    11: 		<% end %>
+    12: 		
+  app/views/categories/edit.html.erb:9:in `_app_views_categories_edit_html_erb__280883839_87726970_0'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.7ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:21:22 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_88033650_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 25ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:23:26 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_87686690_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 70ms (Views: 59.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:23:32 +0500 2011
+
+AbstractController::ActionNotFound (The action 'update' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 31 16:32:57 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 31ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:33:00 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_87804640_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 28ms (Views: 16.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:33:03 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments2"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[35mSQL (11.7ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mAREL (20.2ms)[0m  INSERT INTO `categories` (`name`, `created_at`, `description`, `updated_at`) VALUES ('Garments2', '2011-03-31 11:33:03', NULL, '2011-03-31 11:33:03')
+  [1m[36mSQL (59.0ms)[0m  [1mCOMMIT[0m
+Redirected to 
+Completed   in 132ms
+
+ActionController::RoutingError (No route matches {:action=>"category", :controller=>"categories"}):
+  app/controllers/categories_controller.rb:22:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 31 16:33:14 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 23ms (Views: 14.6ms | ActiveRecord: 92.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 31 16:33:45 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 31 16:33:48 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 27ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 16:33:50 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 109ms (Views: 18.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:34:02 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_88249910_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 24ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:34:29 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_87943130_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 34ms (Views: 17.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:34:33 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments3"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+Completed   in 12ms
+
+NoMethodError (Attempt to call private method):
+  app/controllers/categories_controller.rb:19:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 31 16:35:50 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 112ms (Views: 33.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:35:53 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_86175590_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 72ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:36:03 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments338"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+Completed   in 447837ms
+
+NoMethodError (Attempt to call private method):
+  app/controllers/categories_controller.rb:20:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:43:50 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_86642580_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 30ms (Views: 18.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:43:53 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSQL (1.4ms)[0m  [1mROLLBACK[0m
+Completed   in 26ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: commit):
+  app/controllers/categories_controller.rb:20:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.6ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:44:46 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Completed   in 39ms
+
+NoMethodError (undefined method `category=' for #<Category:0xa5af2bc>):
+  app/controllers/categories_controller.rb:20:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (23.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.8ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:45:14 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to 
+Completed   in 60438ms
+
+ActionController::RoutingError (No route matches {:controller=>"category"}):
+  app/controllers/categories_controller.rb:25:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:47:32 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  COMMIT
+Redirected to 
+Completed   in 18589ms
+
+ActionController::RoutingError (No route matches {:controller=>"category"}):
+  app/controllers/categories_controller.rb:25:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/categories/1/edit" for 127.0.0.1 at Thu Mar 31 16:55:01 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_85393360_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 31ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 16:55:05 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Garments88"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.8ms)[0m  UPDATE `categories` SET `name` = 'Garments88', `updated_at` = '2011-03-31 11:55:15' WHERE (`categories`.`id` = 1)
+  [1m[36mSQL (74.7ms)[0m  [1mCOMMIT[0m
+Redirected to 
+Completed   in 9807ms
+
+ActionController::RoutingError (No route matches {:controller=>"category"}):
+  app/controllers/categories_controller.rb:26:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at Thu Mar 31 16:55:20 +0500 2011
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 28ms (Views: 18.5ms | ActiveRecord: 76.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 17:08:03 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 63ms (Views: 49.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/categories/3" for 127.0.0.1 at Thu Mar 31 17:08:12 +0500 2011
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 17:14:21 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 61ms (Views: 48.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 17:14:27 +0500 2011
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (8.0ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 17:14:51 +0500 2011
+  Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "id"=>"1"}
+Completed   in 122362ms
+
+ActionView::MissingTemplate (Missing template categories/destroy with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/mohsin/Desktop/ruby_practice/js_practice/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started POST "/categories/1" for 127.0.0.1 at Thu Mar 31 17:16:54 +0500 2011
+  Processing by CategoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.8ms)[0m  [1mDELETE FROM `categories` WHERE (`categories`.`id` = 1)[0m
+  [1m[35mSQL (53.4ms)[0m  COMMIT
+Completed   in 5849ms
+
+ActionView::MissingTemplate (Missing template categories/destroy with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/mohsin/Desktop/ruby_practice/js_practice/app/views"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 17:17:05 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 33ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/2/edit" for 127.0.0.1 at Thu Mar 31 17:17:37 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 10ms
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 17:17:37 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/2/edit" for 127.0.0.1 at Thu Mar 31 17:17:42 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 11ms
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 17:17:42 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 37ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/2/edit" for 127.0.0.1 at Thu Mar 31 17:17:58 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_85298460_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 116ms (Views: 106.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/categories/2" for 127.0.0.1 at Thu Mar 31 17:18:01 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Toys2"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `categories` SET `updated_at` = '2011-03-31 12:18:01', `name` = 'Toys2' WHERE (`categories`.`id` = 2)[0m
+  [1m[35mSQL (45.2ms)[0m  COMMIT
+Redirected to 
+Completed   in 64ms
+
+ActionController::RoutingError (No route matches {:controller=>"category"}):
+  app/controllers/categories_controller.rb:23:in `update'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/categories/2/edit" for 127.0.0.1 at Thu Mar 31 17:18:11 +0500 2011
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_categories_edit_html_erb__280883839_86302200_0 at /home/mohsin/Desktop/ruby_practice/js_practice/app/views/categories/edit.html.erb:9)
+Rendered categories/edit.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 33ms (Views: 23.0ms | ActiveRecord: 46.2ms)
+
+
+Started POST "/categories/2" for 127.0.0.1 at Thu Mar 31 17:18:14 +0500 2011
+  Processing by CategoriesController#update as HTML
+  Parameters: {"commit"=>"Update Category", "category"=>{"name"=>"Toys"}, "authenticity_token"=>"D1qRQStnAhMu0ltA4MUPQGooQGYn0WVLVRVzMARlxF4=", "utf8"=>"\342\234\223", "id"=>"2"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `categories` SET `updated_at` = '2011-03-31 12:18:14', `name` = 'Toys' WHERE (`categories`.`id` = 2)
+  [1m[36mSQL (68.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 89ms
+
+
+Started GET "/categories" for 127.0.0.1 at Thu Mar 31 17:18:15 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Thu Mar 31 17:18:20 +0500 2011
+
+AbstractController::ActionNotFound (The action 'new' could not be found for CategoriesController):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Thu Mar 31 18:09:06 +0500 2011
+  Processing by CategoriesController#new as HTML
+Completed   in 1ms
+
+NoMethodError (undefined method `request' for {"action"=>"new", "controller"=>"categories"}:ActiveSupport::HashWithIndifferentAccess):
+  app/controllers/categories_controller.rb:14:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at Fri Apr 01 11:28:36 +0500 2011
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (43.8ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 154ms (Views: 46.2ms | ActiveRecord: 43.8ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:28:38 +0500 2011
+  Processing by CategoriesController#new as HTML
+Completed   in 1ms
+
+NoMethodError (undefined method `request' for {"action"=>"new", "controller"=>"categories"}:ActiveSupport::HashWithIndifferentAccess):
+  app/controllers/categories_controller.rb:14:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.9ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:29:30 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:35:33 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:41:01 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/button.jpg" for 127.0.0.1 at Fri Apr 01 11:41:01 +0500 2011
+
+ActionController::RoutingError (No route matches "/images/button.jpg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:42:06 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/button.jpeg" for 127.0.0.1 at Fri Apr 01 11:42:06 +0500 2011
+
+ActionController::RoutingError (No route matches "/images/button.jpeg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:42:07 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/button.jpeg" for 127.0.0.1 at Fri Apr 01 11:42:07 +0500 2011
+
+ActionController::RoutingError (No route matches "/images/button.jpeg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:42:21 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/button.jpeg" for 127.0.0.1 at Fri Apr 01 11:42:22 +0500 2011
+
+ActionController::RoutingError (No route matches "/images/button.jpeg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/images/button.jpeg" for 127.0.0.1 at Fri Apr 01 11:42:22 +0500 2011
+
+ActionController::RoutingError (No route matches "/images/button.jpeg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/images/button.jpeg" for 127.0.0.1 at Fri Apr 01 11:42:22 +0500 2011
+
+ActionController::RoutingError (No route matches "/images/button.jpeg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:45:01 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:46:08 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:46:40 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:47:28 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:48:15 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:48:53 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at Fri Apr 01 11:49:57 +0500 2011
+  Processing by CategoriesController#new as HTML
+Rendered categories/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategories (20110302130156)
+Migrating to CreateUsers (20110404113640)
+  [1m[35mSQL (109.8ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (47.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110404113640')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/users" for 127.0.0.1 at Mon Apr 04 16:59:51 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 94ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Apr 04 17:00:01 +0500 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (47.9ms)
+Rendered users/new.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 71ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Apr 04 17:00:09 +0500 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"y5V4o/M1puyMJUGVhcxCtzmw/8f4odb7CO+wJpskBhw=", "utf8"=>"\342\234\223", "user"=>{"name"=>"Mohsin", "email"=>"ma@veriqual.com"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.9ms)[0m  describe `users`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `users` (`email`, `created_at`, `updated_at`, `name`) VALUES ('ma@veriqual.com', '2011-04-04 12:00:10', '2011-04-04 12:00:10', 'Mohsin')[0m
+  [1m[35mSQL (52.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 181ms
+
+
+Started GET "/users/1" for 127.0.0.1 at Mon Apr 04 17:00:10 +0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 27ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Apr 04 17:02:32 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 30ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Apr 04 17:02:34 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 31ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Apr 04 17:03:24 +0500 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.2ms)
+Rendered users/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 44ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Apr 04 17:03:38 +0500 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"y5V4o/M1puyMJUGVhcxCtzmw/8f4odb7CO+wJpskBhw=", "utf8"=>"\342\234\223", "user"=>{"name"=>"Aftab Iqbal", "email"=>"ai@yahoo.com"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`email`, `updated_at`, `created_at`, `name`) VALUES ('ai@yahoo.com', '2011-04-04 12:03:38', '2011-04-04 12:03:38', 'Aftab Iqbal')
+  [1m[36mSQL (50.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 71ms
+
+
+Started GET "/users/2" for 127.0.0.1 at Mon Apr 04 17:03:38 +0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Rendered users/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 26ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Apr 04 17:03:40 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 28ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at Mon Apr 04 17:03:44 +0500 2011
+  Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"y5V4o/M1puyMJUGVhcxCtzmw/8f4odb7CO+wJpskBhw=", "id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  DELETE FROM `users` WHERE (`users`.`id` = 1)
+  [1m[36mSQL (62.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 84ms
+
+
+Started GET "/users" for 127.0.0.1 at Mon Apr 04 17:03:45 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 29ms (Views: 19.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Mon Apr 04 17:03:46 +0500 2011
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (10.6ms)
+Rendered users/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 32ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Apr 04 17:03:58 +0500 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create User", "authenticity_token"=>"y5V4o/M1puyMJUGVhcxCtzmw/8f4odb7CO+wJpskBhw=", "utf8"=>"\342\234\223", "user"=>{"name"=>"M. Mohsin Ali", "email"=>"ma@veriqual.com"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  describe `users`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES ('M. Mohsin Ali', 'ma@veriqual.com', '2011-04-04 12:03:58', '2011-04-04 12:03:58')[0m
+  [1m[35mSQL (57.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 79ms
+
+
+Started GET "/users/3" for 127.0.0.1 at Mon Apr 04 17:03:58 +0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 28ms (Views: 16.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Apr 04 17:04:01 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 30ms (Views: 22.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Tue Apr 05 10:41:54 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (12.9ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered users/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 154ms (Views: 61.3ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at Tue Apr 05 10:42:00 +0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at Tue Apr 05 10:42:03 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 28ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at Tue Apr 05 10:42:05 +0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 34ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at Tue Apr 05 10:42:07 +0500 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 150ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at Tue Apr 05 10:42:08 +0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Rendered users/_form.html.erb (53.8ms)
+Rendered users/edit.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 126ms (Views: 118.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at Tue Apr 05 10:42:10 +0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 2) LIMIT 1
+Rendered users/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 23ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateCategories (20110302130156)
+Migrating to CreateUsers (20110404113640)
+Migrating to CreateMicroposts (20110405061217)
+  [1m[35mSQL (132.0ms)[0m  CREATE TABLE `microposts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `content` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (59.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110405061217')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `categories`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `microposts`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `microposts`
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/microposts" for 127.0.0.1 at Tue Apr 05 11:19:17 +0500 2011
+  Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.4ms)[0m  [1mSELECT `microposts`.* FROM `microposts`[0m
+Rendered microposts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at Tue Apr 05 11:19:19 +0500 2011
+  Processing by MicropostsController#new as HTML
+Rendered microposts/_form.html.erb (9.3ms)
+Rendered microposts/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 29ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at Tue Apr 05 11:19:29 +0500 2011
+  Processing by MicropostsController#create as HTML
+  Parameters: {"commit"=>"Create Micropost", "micropost"=>{"user_id"=>"1", "content"=>"Micropost"}, "authenticity_token"=>"MBoI+DcxYbcujAaFZo+CQA3CJ+956Lp5tjwW81TTVLs=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (8.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.3ms)[0m  describe `microposts`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `microposts` (`updated_at`, `created_at`, `user_id`, `content`) VALUES ('2011-04-05 06:19:29', '2011-04-05 06:19:29', 1, 'Micropost')[0m
+  [1m[35mSQL (95.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 148ms
+
+
+Started GET "/microposts/1" for 127.0.0.1 at Tue Apr 05 11:19:30 +0500 2011
+  Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mMicropost Load (0.7ms)[0m  SELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 1) LIMIT 1
+Rendered microposts/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 15.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at Tue Apr 05 11:20:00 +0500 2011
+  Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.6ms)[0m  [1mSELECT `microposts`.* FROM `microposts`[0m
+Rendered microposts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at Tue Apr 05 11:20:03 +0500 2011
+  Processing by MicropostsController#new as HTML
+Rendered microposts/_form.html.erb (7.9ms)
+Rendered microposts/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 30ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at Tue Apr 05 11:20:25 +0500 2011
+  Processing by MicropostsController#create as HTML
+  Parameters: {"commit"=>"Create Micropost", "micropost"=>{"user_id"=>"1", "content"=>"Second Micropost"}, "authenticity_token"=>"MBoI+DcxYbcujAaFZo+CQA3CJ+956Lp5tjwW81TTVLs=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  describe `microposts`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `microposts` (`user_id`, `created_at`, `updated_at`, `content`) VALUES (1, '2011-04-05 06:20:25', '2011-04-05 06:20:25', 'Second Micropost')[0m
+  [1m[35mSQL (65.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/microposts/2
+Completed 302 Found in 181ms
+
+
+Started GET "/microposts/2" for 127.0.0.1 at Tue Apr 05 11:20:25 +0500 2011
+  Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mMicropost Load (0.3ms)[0m  SELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 2) LIMIT 1
+Rendered microposts/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 26ms (Views: 14.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at Tue Apr 05 11:20:33 +0500 2011
+  Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.8ms)[0m  [1mSELECT `microposts`.* FROM `microposts`[0m
+Rendered microposts/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 30ms (Views: 23.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at Tue Apr 05 11:24:11 +0500 2011
+  Processing by MicropostsController#new as HTML
+Rendered microposts/_form.html.erb (10.0ms)
+Rendered microposts/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 33ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at Tue Apr 05 11:24:29 +0500 2011
+  Processing by MicropostsController#create as HTML
+  Parameters: {"commit"=>"Create Micropost", "micropost"=>{"user_id"=>"1", "content"=>"asdasd alkasdklasj dlkjlkas j"}, "authenticity_token"=>"MBoI+DcxYbcujAaFZo+CQA3CJ+956Lp5tjwW81TTVLs=", "utf8"=>"\342\234\223"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered microposts/_form.html.erb (6.0ms)
+Rendered microposts/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 132ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at Tue Apr 05 11:24:40 +0500 2011
+  Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT `microposts`.* FROM `microposts`
+Rendered microposts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 28ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at Tue Apr 05 11:24:42 +0500 2011
+  Processing by MicropostsController#new as HTML
+Rendered microposts/_form.html.erb (11.7ms)
+Rendered microposts/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at Tue Apr 05 11:24:45 +0500 2011
+  Processing by MicropostsController#create as HTML
+  Parameters: {"commit"=>"Create Micropost", "micropost"=>{"user_id"=>"", "content"=>""}, "authenticity_token"=>"MBoI+DcxYbcujAaFZo+CQA3CJ+956Lp5tjwW81TTVLs=", "utf8"=>"\342\234\223"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `microposts`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `microposts` (`user_id`, `created_at`, `content`, `updated_at`) VALUES (NULL, '2011-04-05 06:24:45', '', '2011-04-05 06:24:45')
+  [1m[36mSQL (86.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/microposts/3
+Completed 302 Found in 111ms
+
+
+Started GET "/microposts/3" for 127.0.0.1 at Tue Apr 05 11:24:45 +0500 2011
+  Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mMicropost Load (0.3ms)[0m  [1mSELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 3) LIMIT 1[0m
+Rendered microposts/show.html.erb within layouts/application (114.8ms)
+Completed 200 OK in 132ms (Views: 120.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/microposts/3/edit" for 127.0.0.1 at Tue Apr 05 11:24:47 +0500 2011
+  Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 3) LIMIT 1[0m
+Rendered microposts/_form.html.erb (14.5ms)
+Rendered microposts/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 40ms (Views: 28.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/microposts/3" for 127.0.0.1 at Tue Apr 05 11:24:52 +0500 2011
+  Processing by MicropostsController#update as HTML
+  Parameters: {"commit"=>"Update Micropost", "micropost"=>{"user_id"=>"1", "content"=>"sdfs sdfsd fdsf sd fsdf sd"}, "authenticity_token"=>"MBoI+DcxYbcujAaFZo+CQA3CJ+956Lp5tjwW81TTVLs=", "utf8"=>"\342\234\223", "id"=>"3"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mMicropost Load (0.1ms)[0m  [1mSELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 3) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+Rendered microposts/_form.html.erb (7.5ms)
+Rendered microposts/edit.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 50ms (Views: 22.3ms | ActiveRecord: 0.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users`
+
+
+Started GET "/microposts" for 127.0.0.1 at Tue Apr 05 11:29:39 +0500 2011
+  Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.8ms)[0m  SELECT `microposts`.* FROM `microposts`
+Rendered microposts/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 82ms (Views: 36.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/microposts/1/edit" for 127.0.0.1 at Tue Apr 05 11:29:42 +0500 2011
+  Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mMicropost Load (0.3ms)[0m  SELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 1) LIMIT 1
+Rendered microposts/_form.html.erb (10.9ms)
+Rendered microposts/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 140ms (Views: 22.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/microposts/1" for 127.0.0.1 at Tue Apr 05 11:29:46 +0500 2011
+  Processing by MicropostsController#update as HTML
+  Parameters: {"commit"=>"Update Micropost", "micropost"=>{"user_id"=>"2", "content"=>"Micropost"}, "authenticity_token"=>"MBoI+DcxYbcujAaFZo+CQA3CJ+956Lp5tjwW81TTVLs=", "utf8"=>"\342\234\223", "id"=>"1"}
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `microposts` SET `updated_at` = '2011-04-05 06:29:46', `user_id` = 2 WHERE (`microposts`.`id` = 1)
+  [1m[36mSQL (45.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 71ms
+
+
+Started GET "/microposts/1" for 127.0.0.1 at Tue Apr 05 11:29:46 +0500 2011
+  Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mMicropost Load (0.3ms)[0m  [1mSELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 1) LIMIT 1[0m
+Rendered microposts/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 28ms (Views: 17.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at Tue Apr 05 11:29:47 +0500 2011
+  Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.5ms)[0m  SELECT `microposts`.* FROM `microposts`
+Rendered microposts/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 32ms (Views: 19.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/microposts/2/edit" for 127.0.0.1 at Tue Apr 05 11:29:51 +0500 2011
+  Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (3.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mMicropost Load (3.8ms)[0m  SELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 2) LIMIT 1
+Rendered microposts/_form.html.erb (24.3ms)
+Rendered microposts/edit.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 75ms (Views: 39.0ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/microposts/2" for 127.0.0.1 at Tue Apr 05 11:29:54 +0500 2011
+  Processing by MicropostsController#update as HTML
+  Parameters: {"commit"=>"Update Micropost", "micropost"=>{"user_id"=>"3", "content"=>"Second Micropost"}, "authenticity_token"=>"MBoI+DcxYbcujAaFZo+CQA3CJ+956Lp5tjwW81TTVLs=", "utf8"=>"\342\234\223", "id"=>"2"}
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mMicropost Load (0.1ms)[0m  SELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `microposts` SET `user_id` = 3, `updated_at` = '2011-04-05 06:29:54' WHERE (`microposts`.`id` = 2)
+  [1m[36mSQL (83.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/microposts/2
+Completed 302 Found in 106ms
+
+
+Started GET "/microposts/2" for 127.0.0.1 at Tue Apr 05 11:29:54 +0500 2011
+  Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mMicropost Load (0.4ms)[0m  [1mSELECT `microposts`.* FROM `microposts` WHERE (`microposts`.`id` = 2) LIMIT 1[0m
+Rendered microposts/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 34ms (Views: 21.5ms | ActiveRecord: 1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mMicropost Load (0.8ms)[0m  SELECT `microposts`.* FROM `microposts` WHERE (`microposts`.user_id = 2)
